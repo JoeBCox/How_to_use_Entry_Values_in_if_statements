@@ -1,0 +1,23 @@
+import tkinter add tk
+from tkinter import *
+
+root = Tk()
+
+def user_name_input():
+    global user_name
+
+    user_name = Entry(root)
+    user_name.pack()
+    user_name_enter = Button(root, text="Enter", command=user_name_output)
+    user_name_enter.pack()
+
+def user_name_output():
+    if user_name.get() == "Joe":
+        print("Banana!")
+    else:
+        print("Jumbotron!")
+
+
+user_name_input()
+
+root.mainloop()
